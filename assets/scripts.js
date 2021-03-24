@@ -55,6 +55,8 @@ function cleanUp() {
   $('.dog-profile').show();
 }
 
+// changed the starting point so that the minimum raiting is no less than 3 stars for all dogs //
+
 function getRating() {
   return Math.floor(Math.random() * 5) + 3;
 }
