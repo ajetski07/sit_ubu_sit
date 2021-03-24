@@ -1,6 +1,6 @@
 # sit_ubu_sit
 
-Support Develper Code Quiz - efelle
+Support Developer Code Quiz - efelle
 
 Good Pups Website
 
