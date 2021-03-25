@@ -19,13 +19,13 @@ function getDogs(limit) {
 
 // trying to write a function to pull random images for the banner image //
 
-function randomHeader(images) {
-  var headerImage = $('.banner_image');
+function randomBanner(images) {
+  var bannerImage = $('.banner');
 
   images.forEach(function (image, index) {
-    let header = headerImage.clone();
+    let header = bannerImage.clone();
 
-    $(header).find('.banner_image').attr('src', image);
+    $(header).find('.banner').attr('src', image);
   })
 }
 
