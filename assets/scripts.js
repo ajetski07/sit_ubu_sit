@@ -17,22 +17,21 @@ function getDogs(limit) {
   });
 }
 
+// on click event for "Hide Button" //
+
+$(document).ready(function () {
+  $(document).on('click', '.hide-profile', function () {
+    console.log("is click");
+    $(this).parent().hide();
+  })
+});
+
 // trying to write a function to pull random images for the banner image //
 
 function randomBanner(image) {
   // taking in an image from the loop to display in the banner //
   $('.banner img').attr('src', image);
 }
-
-// attempting to create click event to remove profiles from the page when delete button is clicked. //
-
-// $(document).ready(function () {
-
-//   $('.hide-profile').click(function () {
-//     $('.dog-profile').hide();
-//   });
-
-// })
 
 function buildProfiles(images) {
   var cardTemplate = $('.dog-profile');
