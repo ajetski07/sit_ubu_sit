@@ -19,18 +19,27 @@ function getDogs(limit) {
 
 // trying to write a function to pull random images for the banner image //
 
-function randomBanner(images) {
-  var bannerImage = $('.banner');
-
-  images.forEach(function (image, index) {
-    let header = bannerImage.clone();
-
-    $(header).find('.banner').attr('src', image);
-  })
+function randomBanner(image) {
+  // taking in an image from the loop to display in the banner //
+  $('.banner img').attr('src', image);
 }
+
+// attempting to create click event to remove profiles from the page when delete button is clicked. //
+
+// $(document).ready(function () {
+
+//   $('.hide-profile').click(function () {
+//     $('.dog-profile').hide();
+//   });
+
+// })
 
 function buildProfiles(images) {
   var cardTemplate = $('.dog-profile');
+
+  // Get Images array length as a max //
+
+  var bannerRand = Math.floor(Math.random() * (images.length) + 1);
 
   images.forEach(function (image, index) {
     let card = cardTemplate.clone();
@@ -45,6 +54,14 @@ function buildProfiles(images) {
     }
 
     $(card).appendTo('.dogs .flex');
+
+    // If the current index matches the random number //
+    if (index == bannerRand) {
+      // send the randomBanner function the image url
+
+      randomBanner(images[bannerRand]);
+    }
+
   });
 
   cleanUp();
