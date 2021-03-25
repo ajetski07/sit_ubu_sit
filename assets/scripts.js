@@ -22,7 +22,7 @@ function getDogs(limit) {
 $(document).ready(function () {
   $(document).on('click', '.hide-profile', function () {
     console.log("is click");
-    $(this).parent().hide();
+    $(this).parent().parent().hide();
   })
 });
 
